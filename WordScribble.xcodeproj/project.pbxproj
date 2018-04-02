@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A34613572071B81A00C3EE1C /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34613562071B81A00C3EE1C /* GridCollectionViewController.swift */; };
+		A36C80E120725A0E00AC478A /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E020725A0E00AC478A /* Grid.swift */; };
+		A36C80E320725A5000AC478A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E220725A5000AC478A /* Cell.swift */; };
+		A36C80E520725A9F00AC478A /* Multiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E420725A9F00AC478A /* Multiplier.swift */; };
+		A36C80E720725B3300AC478A /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E620725B3300AC478A /* Tile.swift */; };
 		A3BCECD6207017AA00C28E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCECD5207017AA00C28E6C /* AppDelegate.swift */; };
-		A3BCECD8207017AA00C28E6C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCECD7207017AA00C28E6C /* FirstViewController.swift */; };
 		A3BCECDA207017AA00C28E6C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCECD9207017AA00C28E6C /* SecondViewController.swift */; };
 		A3BCECDD207017AA00C28E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BCECDB207017AA00C28E6C /* Main.storyboard */; };
 		A3BCECDF207017AA00C28E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BCECDE207017AA00C28E6C /* Assets.xcassets */; };
@@ -35,9 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A34613562071B81A00C3EE1C /* GridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewController.swift; sourceTree = "<group>"; };
+		A36C80E020725A0E00AC478A /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		A36C80E220725A5000AC478A /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		A36C80E420725A9F00AC478A /* Multiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplier.swift; sourceTree = "<group>"; };
+		A36C80E620725B3300AC478A /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		A3BCECD2207017AA00C28E6C /* WordScribble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScribble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BCECD5207017AA00C28E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3BCECD7207017AA00C28E6C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		A3BCECD9207017AA00C28E6C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A3BCECDC207017AA00C28E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3BCECDE207017AA00C28E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +84,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34613582071BF3400C3EE1C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A34613562071B81A00C3EE1C /* GridCollectionViewController.swift */,
+				A3BCECD9207017AA00C28E6C /* SecondViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A34613592071BF4B00C3EE1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A36C80E020725A0E00AC478A /* Grid.swift */,
+				A36C80E220725A5000AC478A /* Cell.swift */,
+				A36C80E420725A9F00AC478A /* Multiplier.swift */,
+				A36C80E620725B3300AC478A /* Tile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A346135A2071BF5300C3EE1C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A346135B2071BF6500C3EE1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A3BCECC9207017AA00C28E6C = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +141,11 @@
 		A3BCECD4207017AA00C28E6C /* WordScribble */ = {
 			isa = PBXGroup;
 			children = (
+				A346135B2071BF6500C3EE1C /* Views */,
+				A346135A2071BF5300C3EE1C /* ViewModels */,
+				A34613592071BF4B00C3EE1C /* Models */,
+				A34613582071BF3400C3EE1C /* Controllers */,
 				A3BCECD5207017AA00C28E6C /* AppDelegate.swift */,
-				A3BCECD7207017AA00C28E6C /* FirstViewController.swift */,
-				A3BCECD9207017AA00C28E6C /* SecondViewController.swift */,
 				A3BCECDB207017AA00C28E6C /* Main.storyboard */,
 				A3BCECDE207017AA00C28E6C /* Assets.xcassets */,
 				A3BCECE0207017AA00C28E6C /* LaunchScreen.storyboard */,
@@ -263,8 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BCECDA207017AA00C28E6C /* SecondViewController.swift in Sources */,
+				A36C80E520725A9F00AC478A /* Multiplier.swift in Sources */,
+				A36C80E120725A0E00AC478A /* Grid.swift in Sources */,
+				A36C80E720725B3300AC478A /* Tile.swift in Sources */,
+				A36C80E320725A5000AC478A /* Cell.swift in Sources */,
 				A3BCECD6207017AA00C28E6C /* AppDelegate.swift in Sources */,
-				A3BCECD8207017AA00C28E6C /* FirstViewController.swift in Sources */,
+				A34613572071B81A00C3EE1C /* GridCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
