@@ -12,6 +12,7 @@
 		A36C80E320725A5000AC478A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E220725A5000AC478A /* Cell.swift */; };
 		A36C80E520725A9F00AC478A /* Multiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E420725A9F00AC478A /* Multiplier.swift */; };
 		A36C80E720725B3300AC478A /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E620725B3300AC478A /* Tile.swift */; };
+		A3B9B39720754BFB00F59B4E /* ScrabbleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B39620754BFB00F59B4E /* ScrabbleCell.swift */; };
 		A3BCECD6207017AA00C28E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCECD5207017AA00C28E6C /* AppDelegate.swift */; };
 		A3BCECDA207017AA00C28E6C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCECD9207017AA00C28E6C /* SecondViewController.swift */; };
 		A3BCECDD207017AA00C28E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BCECDB207017AA00C28E6C /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		A36C80E220725A5000AC478A /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		A36C80E420725A9F00AC478A /* Multiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplier.swift; sourceTree = "<group>"; };
 		A36C80E620725B3300AC478A /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		A3B9B39620754BFB00F59B4E /* ScrabbleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrabbleCell.swift; sourceTree = "<group>"; };
 		A3BCECD2207017AA00C28E6C /* WordScribble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScribble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BCECD5207017AA00C28E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BCECD9207017AA00C28E6C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -104,16 +106,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A346135A2071BF5300C3EE1C /* ViewModels */ = {
+		A3B9B39520754BE700F59B4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		A346135B2071BF6500C3EE1C /* Views */ = {
-			isa = PBXGroup;
-			children = (
+				A3B9B39620754BFB00F59B4E /* ScrabbleCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,8 +137,7 @@
 		A3BCECD4207017AA00C28E6C /* WordScribble */ = {
 			isa = PBXGroup;
 			children = (
-				A346135B2071BF6500C3EE1C /* Views */,
-				A346135A2071BF5300C3EE1C /* ViewModels */,
+				A3B9B39520754BE700F59B4E /* Views */,
 				A34613592071BF4B00C3EE1C /* Models */,
 				A34613582071BF3400C3EE1C /* Controllers */,
 				A3BCECD5207017AA00C28E6C /* AppDelegate.swift */,
@@ -240,6 +235,7 @@
 				TargetAttributes = {
 					A3BCECD1207017AA00C28E6C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					A3BCECE7207017AA00C28E6C = {
@@ -312,6 +308,7 @@
 				A36C80E720725B3300AC478A /* Tile.swift in Sources */,
 				A36C80E320725A5000AC478A /* Cell.swift in Sources */,
 				A3BCECD6207017AA00C28E6C /* AppDelegate.swift in Sources */,
+				A3B9B39720754BFB00F59B4E /* ScrabbleCell.swift in Sources */,
 				A34613572071B81A00C3EE1C /* GridCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +475,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WordScribble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zkayser.WordScribble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -492,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WordScribble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
