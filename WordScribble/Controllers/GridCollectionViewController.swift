@@ -16,6 +16,8 @@ class GridCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView?.layer.backgroundColor = UIColor(red:0.97, green:0.84, blue:0.68, alpha:1.0).cgColor
+
         self.collectionView?.contentInset = UIEdgeInsets(top: 7.0, left: 0.0, bottom: 0.0, right: 0.0)
     }
 
@@ -36,15 +38,7 @@ class GridCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ScrabbleCell
-        // Configure the cell
-        // gridViewModel.viewCell(view: ScrabbleCell, cell: Cell) -> ScrabbleCell
         return viewModel.styleCell(view: &cell, data: viewModel.cellAt(path: indexPath))
-//        cell.positionLabel.text = "\(grid.cells[indexPath[1]].position.col)"
-//        cell.positionLabel.textColor = UIColor.black
-//        cell.layer.borderColor = UIColor.black.cgColor
-//        cell.layer.borderWidth = 1
-//        cell.backgroundColor = UIColor.clear
-//        return cell
     }
 
     // MARK: UICollectionViewDelegate

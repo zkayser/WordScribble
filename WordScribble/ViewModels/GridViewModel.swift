@@ -45,13 +45,13 @@ class GridViewModel {
     private func backgroundColor(for cell: Cell) -> CGColor {
         switch (cell.multiplier) {
         case .tripleWord:
-            return UIColor.red.cgColor
+            return UIColor(red:0.84, green:0.21, blue:0.21, alpha:1.0).cgColor
         case .doubleWord:
-            return UIColor.yellow.cgColor
+            return UIColor(red:1.00, green:0.53, blue:0.62, alpha:1.0).cgColor
         case .tripleLetter:
-            return UIColor.purple.cgColor
+            return UIColor(red:0.32, green:0.32, blue:0.72, alpha:1.0).cgColor
         case .doubleLetter:
-            return UIColor.blue.cgColor
+            return UIColor(red:0.47, green:0.78, blue:0.88, alpha:1.0).cgColor
         default:
             return UIColor.clear.cgColor
         }
