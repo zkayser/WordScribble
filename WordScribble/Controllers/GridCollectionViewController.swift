@@ -10,6 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "gridCell"
 private var grid = Grid()
+private let viewModel = GridViewModel(grid: grid)
 
 class GridCollectionViewController: UICollectionViewController {
     
@@ -30,18 +31,20 @@ class GridCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return grid.cells.count
+        return viewModel.cellCount
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ScrabbleCell
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ScrabbleCell
         // Configure the cell
-        cell.positionLabel.text = "\(grid.cells[indexPath[1]].position.col)"
-        cell.positionLabel.textColor = UIColor.black
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.backgroundColor = UIColor.clear
-        return cell
+        // gridViewModel.viewCell(view: ScrabbleCell, cell: Cell) -> ScrabbleCell
+        return viewModel.styleCell(view: &cell, data: viewModel.cellAt(path: indexPath))
+//        cell.positionLabel.text = "\(grid.cells[indexPath[1]].position.col)"
+//        cell.positionLabel.textColor = UIColor.black
+//        cell.layer.borderColor = UIColor.black.cgColor
+//        cell.layer.borderWidth = 1
+//        cell.backgroundColor = UIColor.clear
+//        return cell
     }
 
     // MARK: UICollectionViewDelegate

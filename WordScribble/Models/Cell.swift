@@ -25,7 +25,17 @@ struct Cell {
     }
     
     private static func multiplier(for position: Position) -> Multiplier {
-      return .noMultiplier
+        if Cell.tripleWordPositions.contains(where: { $0 == position }) {
+            return .tripleWord
+        } else if Cell.doubleWordPositions.contains(where: { $0 == position}) {
+            return .doubleWord
+        } else if Cell.tripleLetterPositions.contains(where: { $0 == position}) {
+            return .tripleLetter
+        } else if Cell.doubleLetterPositions.contains(where: { $0 == position}) {
+            return .doubleLetter
+        } else {
+            return .noMultiplier
+        }
     }
     
     static private let tripleWordPositions: [Position] = [

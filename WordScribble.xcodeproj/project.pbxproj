@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32684AA2076EC2B00401833 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32684A92076EC2B00401833 /* CellViewModel.swift */; };
+		A32684AC2076EC8700401833 /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32684AB2076EC8700401833 /* GridViewModel.swift */; };
 		A34613572071B81A00C3EE1C /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34613562071B81A00C3EE1C /* GridCollectionViewController.swift */; };
 		A36C80E120725A0E00AC478A /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E020725A0E00AC478A /* Grid.swift */; };
 		A36C80E320725A5000AC478A /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36C80E220725A5000AC478A /* Cell.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A32684A92076EC2B00401833 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		A32684AB2076EC8700401833 /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
 		A34613562071B81A00C3EE1C /* GridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewController.swift; sourceTree = "<group>"; };
 		A36C80E020725A0E00AC478A /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		A36C80E220725A5000AC478A /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32684A82076EC0500401833 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A32684A92076EC2B00401833 /* CellViewModel.swift */,
+				A32684AB2076EC8700401833 /* GridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A34613582071BF3400C3EE1C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 		A3BCECD4207017AA00C28E6C /* WordScribble */ = {
 			isa = PBXGroup;
 			children = (
+				A32684A82076EC0500401833 /* ViewModels */,
 				A3B9B39520754BE700F59B4E /* Views */,
 				A34613592071BF4B00C3EE1C /* Models */,
 				A34613582071BF3400C3EE1C /* Controllers */,
@@ -306,9 +320,11 @@
 				A36C80E520725A9F00AC478A /* Multiplier.swift in Sources */,
 				A36C80E120725A0E00AC478A /* Grid.swift in Sources */,
 				A36C80E720725B3300AC478A /* Tile.swift in Sources */,
+				A32684AA2076EC2B00401833 /* CellViewModel.swift in Sources */,
 				A36C80E320725A5000AC478A /* Cell.swift in Sources */,
 				A3BCECD6207017AA00C28E6C /* AppDelegate.swift in Sources */,
 				A3B9B39720754BFB00F59B4E /* ScrabbleCell.swift in Sources */,
+				A32684AC2076EC8700401833 /* GridViewModel.swift in Sources */,
 				A34613572071B81A00C3EE1C /* GridCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
